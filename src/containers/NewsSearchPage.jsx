@@ -1,30 +1,38 @@
 import React, { Component } from 'react';
-import ArticleList from '../components/article/ArticleList';
-import SearchBar from '../components/search/SearchBar';
+import { v4 as uuidv4 } from 'uuid';
+import { getArticles } from '../services/articleApi';
 
-export default class ColorPicker extends Component {
+
+export default class NewsSearchPage extends Component {
   state = {
     search: '',
     loading: true,
     articles: []
   }
 
-  handleChange = ({ target }) => {
-    this.setState({ [target.name]: target.value });
+  fetchArticles = () => {
+    getArticles(this.state.search).then(articles => 
+      this.setState({ articles }));
   }
 
+  handleChange = ({ target }) => {
+    this.setState({ [target.name]: target.value }, () => {
+      this.fetchArticles();
+    });
+  }
   render() {
     const { search, loading, articles } = this.state;
+
+    const articleElements = articles.map(article => (
+      <li key={uuidv4()}>
+        <h1>{article}</h1>
+      </li>
+    ));
+
     return (
       <>
-        <SearchBar 
-          //prop={prop}
-          //onChange={this.handleChange}
-        />
-        <ArticleList 
-          //prop={prop}
-          //onChange={this.handleChange}
-        />
+        <input type="text" name="search" onChange={this.handleChange}></input>
+        <div>{articleElements}</div>
       </>
     );
   }

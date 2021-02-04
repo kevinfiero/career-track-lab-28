@@ -5,8 +5,6 @@ const SearchBar = () => (
   <>
     <input type="text"></input>
   </>
-
-
 );
 
 export default SearchBar;
