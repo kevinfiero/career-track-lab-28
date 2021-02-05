@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App component renders App 1`] = `
+exports[`SearchBar component renders SearchBar 1`] = `
 <DocumentFragment>
   <label
     for="search"
@@ -11,15 +11,7 @@ exports[`App component renders App 1`] = `
     id="search"
     name="search"
     type="text"
-    value=""
+    value="Tesla"
   />
-  <h1>
-    Loading...
-  </h1>
-  <ul
-    data-testid="articleList"
-  >
-    <div />
-  </ul>
 </DocumentFragment>
 `;
