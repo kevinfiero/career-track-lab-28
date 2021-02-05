@@ -31,8 +31,16 @@ export default class NewsSearchPage extends Component {
 
     return (
       <>
-        <input type="text" name="search" onChange={this.handleChange}></input>
-        <div>{articleElements}</div>
+        <ul data-testid="articleList">
+          <label htmlFor="search">Search Here:</label>
+          <input 
+            id="search" 
+            type="text" 
+            name="search" 
+            onChange={this.handleChange}>
+          </input>
+          <div>{articleElements}</div>
+        </ul>
       </>
     );
   }

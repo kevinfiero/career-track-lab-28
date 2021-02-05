@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleList component renders ArticleList 1`] = `
+<DocumentFragment>
+  <h1>
+    Article 1
+  </h1>
+  <h1>
+    Article 2
+  </h1>
+  <h1>
+    Article 3
+  </h1>
+  <h1>
+    Article 4
+  </h1>
+</DocumentFragment>
+`;
