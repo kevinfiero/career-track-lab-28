@@ -3,7 +3,7 @@
 exports[`Article component renders Article 1`] = `
 <DocumentFragment>
   <h1>
-    Article
+    Extra! Extra!
   </h1>
 </DocumentFragment>
 `;

@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
+import Article from './Article';
 
 const ArticleList = ({ articles }) => {
   const articleElements = articles.map(article => (
     <li key={uuidv4()}>
-      <h1>{article}</h1>
+      <Article article={article} />
     </li>
   ));
 

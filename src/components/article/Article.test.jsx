@@ -6,9 +6,7 @@ describe('Article component', () => {
   afterEach(() => cleanup());
   it('renders Article', () => {
     const { asFragment } = render(<Article  
-      //bgColor="#FF0000" 
-      //fgColor="#0000FF" 
-      //text="Hello!" 
+      article = "Extra! Extra!"
     />);
     expect(asFragment()).toMatchSnapshot();
   });
