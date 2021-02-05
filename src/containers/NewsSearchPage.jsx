@@ -13,7 +13,7 @@ export default class NewsSearchPage extends Component {
 
   fetchArticles = () => {
     getArticles(this.state.search).then(articles => 
-      this.setState({ articles }));
+      this.setState({ articles, loading: false }));
   }
 
   handleChange = ({ target }) => {
@@ -30,6 +30,7 @@ export default class NewsSearchPage extends Component {
           search={search}
           onChange = {this.handleChange}
         />
+        {loading && <h1>Loading...</h1>}
         <ArticleList 
           articles={articles}
         />
