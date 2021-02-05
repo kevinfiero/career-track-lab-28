@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-
 import { getArticles } from '../services/articleApi';
 import ArticleList from '../components/article/ArticleList';
+import SearchBar from '../components/search/SearchBar';
 
 
 export default class NewsSearchPage extends Component {
@@ -24,17 +24,13 @@ export default class NewsSearchPage extends Component {
   render() {
     const { search, loading, articles } = this.state;
 
-
-
     return (
       <>
-        <label htmlFor="search">Search Here:</label>
-        <input 
-          id="search" 
-          type="text" 
-          name="search" 
-          onChange={this.handleChange}>
-        </input>
+        <SearchBar 
+          search={search}
+          onChange = {this.handleChange}
+        
+        />
         <ArticleList 
           articles={articles}
         />
