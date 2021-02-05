@@ -13,6 +13,9 @@ exports[`App component renders App 1`] = `
     type="text"
     value=""
   />
+  <h1>
+    Loading...
+  </h1>
   <ul
     data-testid="articleList"
   >
