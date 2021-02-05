@@ -6,9 +6,7 @@ describe('ArticleList component', () => {
   afterEach(() => cleanup());
   it('renders ArticleList', () => {
     const { asFragment } = render(<ArticleList  
-      //bgColor="#FF0000" 
-      //fgColor="#0000FF" 
-      //text="Hello!" 
+      articles={['Article 1', 'Article 2', 'Article 3'] }
     />);
     expect(asFragment()).toMatchSnapshot();
   });
