@@ -29,7 +29,6 @@ export default class NewsSearchPage extends Component {
         <SearchBar 
           search={search}
           onChange = {this.handleChange}
-        
         />
         <ArticleList 
           articles={articles}
